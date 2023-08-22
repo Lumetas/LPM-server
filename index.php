@@ -13,6 +13,9 @@ if (!file_exists('password')){
     }
 }
 
+if (!file_exists('ps')){
+    mkdir('ps');
+}
 
 if ($_GET['password'] != file_get_contents('password')){exit;}
 
