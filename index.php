@@ -55,14 +55,14 @@ if ($_GET['func'] == 'remove'){
     echo 'ok';
 }
 if ($_GET['func'] == 'init'){
-    echo shell_exec('cd ./ps/'.$_GET['name'].' ; $(sed -n 3p lumake) & ');
+    echo shell_exec('cd ./ps/'.$_GET['name'].' ; bash -c "$(sed -n 3p lumake)" &');
 }
 if ($_GET['func'] == 'run'){
-    echo shell_exec('cd ./ps/'.$_GET['name'].' ; $(sed -n 4p lumake) & ');
+    echo shell_exec('cd ./ps/'.$_GET['name'].' ; bash -c "$(sed -n 4p lumake)" & ');
 }
 
 if ($_GET['func'] == 'build'){
-    echo shell_exec('cd ./ps/'.$_GET['name'].' ; $(sed -n 5p lumake) & ');
+    echo shell_exec('cd ./ps/'.$_GET['name'].' ; bash -c "$(sed -n 5p lumake)" & ');
 }
 if ($_GET['func'] == 'version'){
     echo shell_exec('cd ./ps/'.$_GET['name'].' ; echo "version: $(sed -n 6p lumake)"');
